@@ -1,0 +1,87 @@
+import React from "react";
+import { CiShoppingCart } from "react-icons/ci";
+const Navbar = () => {
+  return (
+    <div className="navbar bg-base-100 shadow-sm px-50">
+      <div className="navbar-start">
+        <div className="dropdown">
+          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {" "}
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />{" "}
+            </svg>
+          </div>
+          <ul
+            tabIndex="-1"
+            className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
+          >
+    <li>
+            <a>Products</a>
+          </li>
+          <li>
+               <a >
+                    Features
+               </a>
+          </li>
+          <li>
+            <a>Pricing</a>
+          </li>
+          <li>
+            <a>Testimonials</a>
+          </li>
+          <li>
+            <a>FAQ</a>
+          </li>
+          </ul>
+        </div>
+        <a className=" hidden md:block btn btn-ghost bg-gradient-to-r from-[#4F39F6] to-[#9514FA] bg-clip-text text-transparent text-3xl font-bold  ">
+          DigiTools
+        </a>
+      </div>
+      <div className="  navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal px-1">
+          <li>
+            <a className="text-[15px] font-semibold">Products</a>
+          </li>
+          <li>
+               <a className="text-[15px] font-semibold" >
+                    Features
+               </a>
+          </li>
+          <li>
+            <a className="text-[15px] font-semibold">Pricing</a>
+          </li>
+          <li>
+            <a className="text-[15px] font-semibold">Testimonials</a>
+          </li>
+          <li>
+            <a className="text-[15px] font-semibold">FAQ</a>
+          </li>
+        </ul>
+      </div>
+      <div className="  flex items-center gap-4 navbar-end">
+          <div className="relative">
+               <CiShoppingCart  className="w-10 h-6"/>
+               <div className="absolute left-6 -top-4 w-5 h-5 rounded-full bg-red-500 text-white flex items-center justify-center text-xs">
+                    <p>0</p>
+               </div>
+          </div>
+          <button className="btn  btn-ghost">Login</button>
+        <a className="btn rounded-full bg-gradient-to-r from-[#4F39F6] to-[#9514FA] text-white">Get Started</a>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;
