@@ -8,7 +8,7 @@ import Cards from "./Components/MainCardSection/Cards";
 import { ToastContainer } from "react-toastify";
 import ThreeSteps from "./Components/HeroSection/ThreeSteps";
 import TransparentPricing from "./Components/HeroSection/TransparentPricing";
-
+import TransfromWorkflow from "./Components/HeroSection/TransfromWorkflow";
 
 const cardsData = async () => {
   const response = await fetch("../Data.json");
@@ -27,18 +27,31 @@ function App() {
       <Navbar cart={cart} />
       <HeroSection />
       <HeroSecond />
-      <PrimiumDigitSection cart={cart} setCart={setCart} products={products} setProducts={setProducts} />
+      <PrimiumDigitSection
+        cart={cart}
+        setCart={setCart}
+        products={products}
+        setProducts={setProducts}
+      />
       <Suspense
         fallback={
-          <span className="loading loading-spinner flex justify-center items-center loading-xl"></span>
+          <div className="flex justify-center items-center ">
+            <span className="loading loading-spinner  w-50 h-50 loading-xl"></span>
+          </div>
         }
       >
-        <Cards cart={cart} setCart={setCart} products={products} setProducts={setProducts} data={data} />
+        <Cards
+          cart={cart}
+          setCart={setCart}
+          products={products}
+          setProducts={setProducts}
+          data={data}
+        />
       </Suspense>
       <ToastContainer />
       <ThreeSteps />
       <TransparentPricing />
-      
+      <TransfromWorkflow />
     </div>
   );
 }
