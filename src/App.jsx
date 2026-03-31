@@ -7,6 +7,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import Cards from "./Components/MainCardSection/Cards";
 import { ToastContainer } from "react-toastify";
 import ThreeSteps from "./Components/HeroSection/ThreeSteps";
+import TransparentPricing from "./Components/HeroSection/TransparentPricing";
 
 
 const cardsData = async () => {
@@ -36,6 +37,7 @@ function App() {
       </Suspense>
       <ToastContainer />
       <ThreeSteps />
+      <TransparentPricing />
       
     </div>
   );
