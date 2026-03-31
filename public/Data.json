@@ -97,16 +97,6 @@
     "tagType": "new",
     "features": ["1TB storage", "Secure backup", "File sharing"],
     "icon": "https://cdn-icons-png.flaticon.com/512/4144/4144468.png"
-  },
-  {
-    "id": 10,
-    "name": "Analytics Dashboard Pro",
-    "description": "Get deep insights into your business with advanced analytics tools.",
-    "price": 79,
-    "period": "yearly",
-    "tag": "Popular",
-    "tagType": "popular",
-    "features": ["Real-time analytics", "Custom reports", "Data visualization"],
-    "icon": "https://cdn-icons-png.flaticon.com/512/1828/1828859.png"
   }
+
 ]

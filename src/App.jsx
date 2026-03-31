@@ -6,6 +6,7 @@ import PrimiumDigitSection from "./Components/HeroSection/PrimiumDigitSection";
 import Navbar from "./Components/Navbar/Navbar";
 import Cards from "./Components/MainCardSection/Cards";
 import { ToastContainer } from "react-toastify";
+import ThreeSteps from "./Components/HeroSection/ThreeSteps";
 
 
 const cardsData = async () => {
@@ -34,6 +35,7 @@ function App() {
         <Cards cart={cart} setCart={setCart} products={products} setProducts={setProducts} data={data} />
       </Suspense>
       <ToastContainer />
+      <ThreeSteps />
       
     </div>
   );
