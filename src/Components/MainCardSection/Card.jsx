@@ -1,6 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
-const Card = ({ item }) => {
+const Card = ({ item , cart, setCart }) => {
+  const [isSelected, setIsSelected] = useState(false);
+  const handleSelect = () => {
+    setIsSelected(true);
+    alert(`You have selected the ${item.name} plan!`);
+    setCart([...cart, item]);
+
+  };
   return (
     <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm relative group hover:shadow-2xl hover:border-transparent transition-all duration-300 transform hover:-translate-y-1">
       <span className="absolute top-4 right-4 bg-orange-100 group-hover:bg-orange-200 text-orange-600 text-xs font-bold px-3 py-1 rounded-full transition-colors duration-300">
@@ -8,7 +15,7 @@ const Card = ({ item }) => {
       </span>
 
       <div className="text-4xl mb-6 flex items-center justify-center bg-gray-50 group-hover:bg-violet-100 w-16 h-16 rounded-xl transition-colors duration-300">
-        <img src={item.icon} alt="icon" className="w-8 h-8"/>
+        <img src={item.icon} alt="icon" className="w-8 h-8" />
       </div>
 
       <h3 className="text-2xl font-bold text-gray-800 mb-3 group-hover:text-violet-700 transition-colors duration-300">
@@ -36,8 +43,12 @@ const Card = ({ item }) => {
         ))}
       </ul>
 
-      <button className="w-full bg-[#7C3AED]  text-white font-semibold py-3 rounded-xl ">
-        Buy Now
+      <button
+        disabled={isSelected}
+       className={`w-full ${isSelected ? 'bg-green-500' : 'bg-[#7C3AED]'} text-white font-semibold py-3 rounded-xl`}
+        onClick={handleSelect}
+      >
+        {isSelected ? "Selected Plan" : " Buy Now"}
       </button>
     </div>
   );

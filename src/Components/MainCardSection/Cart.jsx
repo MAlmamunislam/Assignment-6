@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Cart = () => {
+const Cart = ({ cart, setCart }) => {
+     console.log(cart);
      return (
           <div>
-               <h2 className='text-center'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, neque! A dignissimos voluptatum at aliquid blanditiis inventore rerum ipsam laboriosam.</h2>
+               {cart.length } 
           </div>
      );
 };

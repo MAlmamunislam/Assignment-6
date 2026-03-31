@@ -17,18 +17,20 @@ function App() {
   const data = cardsData();
   console.log(data);
   const [products, setProducts] = useState(true);
+  const [cart, setCart] = useState([]);
+
   return (
     <div>
-      <Navbar />
+      <Navbar cart={cart} />
       <HeroSection />
       <HeroSecond />
-      <PrimiumDigitSection products={products} setProducts={setProducts} />
+      <PrimiumDigitSection cart={cart} setCart={setCart} products={products} setProducts={setProducts} />
       <Suspense
         fallback={
           <span className="loading loading-spinner flex justify-center items-center loading-xl"></span>
         }
       >
-        <Cards products={products} setProducts={setProducts} data={data} />
+        <Cards cart={cart} setCart={setCart} products={products} setProducts={setProducts} data={data} />
       </Suspense>
       
     </div>

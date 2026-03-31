@@ -1,6 +1,7 @@
 import React from "react";
 
-const PrimiumDigitSection = ({ products, setProducts }) => {
+const PrimiumDigitSection = ({  products, setProducts , cart, setCart }) => {
+  
   return (
     <div className="mt-[120px] mb-[40px] ">
       <div className=" text-center">
@@ -20,7 +21,7 @@ const PrimiumDigitSection = ({ products, setProducts }) => {
             className={`btn rounded-r-full ${!products ? 'btn-primary' : ''}`}
             onClick={() => setProducts(false)}
           >
-            Cart (2)
+            Cart ({cart.length})
           </button>
         </div>
       </div>
