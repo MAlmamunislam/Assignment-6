@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import { IoMdCheckmark } from "react-icons/io";
+import { toast } from "react-toastify";
 const Card = ({ item , cart, setCart }) => {
   const [isSelected, setIsSelected] = useState(false);
   const handleSelect = () => {
     setIsSelected(true);
-    alert(`You have selected the ${item.name} plan!`);
+     toast.success(`You have selected the ${item.name} plan!`);
     setCart([...cart, item]);
 
   };
   return (
-    <div className="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm relative group hover:shadow-2xl hover:border-transparent transition-all duration-300 transform hover:-translate-y-1">
+      <div className="bg-white p-8  rounded-2xl border border-gray-100 shadow-sm relative group hover:shadow-2xl hover:border-transparent transition-all duration-300 transform hover:-translate-y-1">
       <span className="absolute top-4 right-4 bg-orange-100 group-hover:bg-orange-200 text-orange-600 text-xs font-bold px-3 py-1 rounded-full transition-colors duration-300">
         {item.tag}
       </span>
@@ -51,6 +52,7 @@ const Card = ({ item , cart, setCart }) => {
         {isSelected ? "Selected Plan" : " Buy Now"}
       </button>
     </div>
+
   );
 };
 
