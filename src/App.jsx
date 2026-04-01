@@ -9,6 +9,7 @@ import { ToastContainer } from "react-toastify";
 import ThreeSteps from "./Components/HeroSection/ThreeSteps";
 import TransparentPricing from "./Components/HeroSection/TransparentPricing";
 import TransfromWorkflow from "./Components/HeroSection/TransfromWorkflow";
+import Fotter from "./Components/Fotter/Fotter";
 
 const cardsData = async () => {
   const response = await fetch("../Data.json");
@@ -52,6 +53,7 @@ function App() {
       <ThreeSteps />
       <TransparentPricing />
       <TransfromWorkflow />
+      <Fotter/>
     </div>
   );
 }
