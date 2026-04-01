@@ -16,9 +16,9 @@ const cardsData = async () => {
   const data = await response.json();
   return data;
 };
-
-function App() {
   const data = cardsData();
+function App() {
+
   console.log(data);
   const [products, setProducts] = useState(true);
   const [cart, setCart] = useState([]);
